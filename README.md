@@ -22,7 +22,9 @@ iOS개발자들에게 필요한 자료들을 정리하고 있는 중입니다.
 
 ## iOS
 - Bounds 와 Frame 의 차이점을 설명하시오.
+  - Bounds는 뷰 컴포넌트 자기자신의 기준에서의 위치 좌표를 말하며 Frame은 부모뷰를 기준으로 한 위치 좌표를 말함.
 - 실제 디바이스가 없을 경우 개발 환경에서 할 수 있는 것과 없는 것을 설명하시오.
+  - 카메라 하드웨어 기능, 노티 등은 시뮬레이터로 할 수 없음
 - 앱의 콘텐츠나 데이터 자체를 저장/보관하는 특별한 객체를 무엇이라고 하는가?
 - 앱 화면의 콘텐츠를 표시하는 로직과 관리를 담당하는 객체를 무엇이라고 하는가?
 - App thinning에 대해서 설명하시오.
@@ -41,10 +43,12 @@ iOS개발자들에게 필요한 자료들을 정리하고 있는 중입니다.
 - Global DispatchQueue 의 Qos 에는 어떤 종류가 있는지, 각각 어떤 의미인지 설명하시오.
 ###
 - iOS 앱을 만들고, User Interface를 구성하는 데 필수적인 프레임워크 이름은 무엇인가?
+  - UIKit
 - Foundation Kit은 무엇이고 포함되어 있는 클래스들은 어떤 것이 있는지 설명하시오.
 - Delegate란 무언인가 설명하고, retain 되는지 안되는지 그 이유를 함께 설명하시오.
 - NotificationCenter 동작 방식과 활용 방안에 대해 설명하시오.
 - UIKit 클래스들을 다룰 때 꼭 처리해야하는 애플리케이션 쓰레드 이름은 무엇인가?
+  - MainThread
 - App Bundle의 구조와 역할에 대해 설명하시오.
 - 모든 View Controller 객체의 상위 클래스는 무엇이고 그 역할은 무엇인가?
 - 자신만의 Custom View를 만들려면 어떻게 해야하는지 설명하시오.
@@ -59,15 +63,26 @@ iOS개발자들에게 필요한 자료들을 정리하고 있는 중입니다.
 - NSCache와 딕셔너리로 캐시를 구성했을때의 차이를 설명하시오.
 - URLSession에 대해서 설명하시오.
 - prepareForReuse에 대해서 설명하시오.
+  - UITableViewCell과 UICollectionReusableView의 메서드이며, 셀 혹은 reusable view가 재사용 될 때 dequeue메서드 호출전에 호출되어 재사용을 준비할 수 있도록 하는 메서드.
 - 다크모드를 지원하는 방법에 대해 설명하시오.
 
 ## Autolayout
 - 오토레이아웃을 코드로 작성하는 방법은 무엇인가? (3가지)
+  - NSLayoutConstraint 인스턴스 사용, 비주얼포맷랭기지 사용, 앵커를 사용
 - hugging, resistance에 대해서 설명하시오.
 - Intrinsic Size에 대해서 설명하시오.
+  - 뷰의 콘텐츠가 가진 본연의 크기. 대부분의 뷰들이 제약사항으로 가로세로를 추가하지 않아도 오류가 나지않는 이유는 기본적으로 콘텐츠 크기만큼의 사이즈인 intrinsic content size를 가지고 있기 때문.
 - 스토리보드를 이용했을때의 장단점을 설명하시오.
+  - 장점
+    - 기획, 디자이너와 협업
+    - 직관적으로 UI 구조 파악
+  - 단점
+    - 버전관리 불편
+    - 직관적이지 못한 UI 구조 파악
 - Safearea에 대해서 설명하시오.
 - Left Constraint 와 Leading Constraint 의 차이점을 설명하시오.
+  - left: 물리적인 왼쪽
+  - leading: 언어권에 따라 다를 수 있는 선행방향
 
 ## Swift
 - struct와 class와 enum의 차이를 설명하시오.
